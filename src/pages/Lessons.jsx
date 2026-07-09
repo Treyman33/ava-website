@@ -1,7 +1,10 @@
+import Navbar2 from '../components/Navbar2.jsx'
+ 
 function Lessons() {
-  return (
+    return (
     <>
-      <h1>Lessons</h1>
+        <Navbar2/>
+        <h1>Lessons</h1>
     </>
   );
 }

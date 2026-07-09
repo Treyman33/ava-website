@@ -31,8 +31,8 @@ return (
 <Navbar/> 
 <section id="hero" className="hero"> <img src={ap} alt="Swimming lessons hero" className="hero-img" />
     <div className="hero-content">
-      <h1>Hero Text Here</h1>
-      <p>Some Filler Text Ava Comes up With</p>
+      <h1>Swimply The Best</h1>
+      <p>This may be the worst dad-joke/pun I've ever come up with</p>
     </div>
   </section>
 
@@ -121,10 +121,14 @@ return (
       {shuffledTestimonials.slice(0, 6).map((t, i) => (
         <div className="testimonial-card" key={i}>
           <div className="testimonial-header">
-            <h3 className="testimonial-name">
-              {t.firstName} {t.lastName}
-            </h3>
-
+            <div className = 'testimonial-info'>
+                <h3 className="testimonial-name">
+                {t.firstName} {t.lastName}
+                </h3>
+                <span className="testimonial-rating"> 
+                    {"★".repeat(t.rating)}
+                </span>
+            </div>
             <span className="testimonial-date">
               {t.dateSubmitted}
             </span>
@@ -145,7 +149,7 @@ return (
       <div className="privateRates">
         <h2>Private Lessons</h2>
         <p>Individualized + Private Lessons (30 min) - $55 per Child</p>
-        <p>Infants [0 - 2 y/o] (15 min) - $30</p>
+        <p>Infants [0 - 2 y/o] (15 min) - $30 per Child</p>
       </div>
 
       <div className="groupRates">
@@ -158,5 +162,4 @@ return (
 
 )
 }
-
 export default Home
