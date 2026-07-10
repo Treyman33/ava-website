@@ -2,6 +2,7 @@ import Navbar2 from "../components/Navbar2";
 import ap6 from "../assets/ap6.jpg";
 import ap5 from "../assets/ap5.jpg"
 import ap7 from "../assets/ap7.jpg"
+import ap8 from "../assets/ap8.jpg"
 
 function AboutMe() {
   return (
@@ -52,7 +53,7 @@ function AboutMe() {
             </p>
         </div>
         <div className = "am-content-6">
-            {/*<img src={ap7} className = "am-img-3" />*/}
+            <img src={ap8} className = "am-img-3" />
         </div>
       </section>
     </>
