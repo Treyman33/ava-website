@@ -23,6 +23,11 @@ function AboutMe() {
           </p>
         </div>
       </section>
+      <section className = "am-content">
+        <div className = "am-content-1">
+            <p>TEST</p>
+        </div>
+      </section>
     </>
   );
 }
