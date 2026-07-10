@@ -581,6 +581,7 @@ code {
 }
 .am-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 60px 20px;
   background: var(--bg);
@@ -597,6 +598,13 @@ code {
 }
 .am-content-1 p{
   font-size: 1.25rem;
+}
+
+.am-img-1 {
+  width: 40%;
+  height: 300px;
+  object-fit: scale-down;
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -679,7 +687,7 @@ code {
   }
 
   .am-hero-content {
-  top: 30%;
+  top: 15%;
   left: 30%;
   right: 4%;
   }

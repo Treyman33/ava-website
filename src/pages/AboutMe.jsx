@@ -1,5 +1,6 @@
 import Navbar2 from "../components/Navbar2";
 import ap6 from "../assets/ap6.jpg";
+import ap5 from "../assets/ap5.jpg"
 
 function AboutMe() {
   return (
@@ -30,6 +31,9 @@ function AboutMe() {
                  I decided to begin giving private lessons as I felt that more indidivualized lessons would be more beneficial for the kids.
                 I have helped over 100 kids learn to swim, and am excited to teach your kids to swim as well!
             </p>
+        </div>
+        <div className = "am-content-2">
+            <img src={ap5} className = "am-img-1" />
         </div>
       </section>
     </>
