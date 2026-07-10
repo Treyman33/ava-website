@@ -32,7 +32,7 @@ return (
 <section id="hero" className="hero"> <img src={ap} alt="Swimming lessons hero" className="hero-img" />
     <div className="hero-content">
       <h1>Swimply The Best</h1>
-      <p>This may be the worst dad-joke/pun I've ever come up with</p>
+      <p>AEM Swim Lessons</p>
     </div>
   </section>
 

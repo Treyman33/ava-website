@@ -1,6 +1,7 @@
 import Navbar2 from "../components/Navbar2";
 import ap6 from "../assets/ap6.jpg";
 import ap5 from "../assets/ap5.jpg"
+import ap7 from "../assets/ap7.jpg"
 
 function AboutMe() {
   return (
@@ -34,6 +35,24 @@ function AboutMe() {
         </div>
         <div className = "am-content-2">
             <img src={ap5} className = "am-img-1" />
+        </div>
+        <div className = "am-content-3">
+            <h2>My Life</h2>
+            <p> In the Spring of '26 I graduated from MidAmerican Nazarene University in Olathe, Kansas. I achieved a B.A. in Psychology
+                and a B.A. in Sociology. I am now attending Point Loma Nazarene University studying to obtain a M.A. in Clinical and Mental Health Counseling,
+                with a desire to work with adolescents.
+            </p>
+        </div>
+        <div className = "am-content-4">
+            <img src={ap7} className = "am-img-2" />
+        </div>
+        <div className = "am-content-5">
+            <h2>Who Am I?</h2>
+            <p> I am a Christian, who enjoys working with kids.
+            </p>
+        </div>
+        <div className = "am-content-6">
+            {/*<img src={ap7} className = "am-img-3" />*/}
         </div>
       </section>
     </>
