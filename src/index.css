@@ -595,6 +595,9 @@ code {
 
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
+.am-content-1 p{
+  font-size: 1.25rem;
+}
 
 @media (max-width: 768px) {
   .navbar-left {
@@ -677,8 +680,8 @@ code {
 
   .am-hero-content {
   top: 30%;
-  left: 15%;
-  right: 8%;
+  left: 30%;
+  right: 4%;
   }
 
   .am-hero-content h1 {

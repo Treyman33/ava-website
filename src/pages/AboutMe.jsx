@@ -24,7 +24,11 @@ function AboutMe() {
       </section>
       <section className = "am-content">
         <div className = "am-content-1">
-            <p>TEST</p>
+            <h2> My Story</h2>
+            <p>Hi, my name is Ava Marcum! I am 22 years old and have been teaching swimming lessons every summer for the past 7 years.
+                I originally began to teach swimming lessons when I worked at Aqua Tots Swim School. After working there for *INSERT TIME HERE*,
+                 I decided to begin giving private lessons as I felt that more indidivualized lessons would be more beneficial for the kids. 
+            </p>
         </div>
       </section>
     </>
