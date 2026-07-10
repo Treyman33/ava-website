@@ -48,7 +48,7 @@ function AboutMe() {
         </div>
         <div className = "am-content-5">
             <h2>Who Am I?</h2>
-            <p> I am a Christian, who enjoys working with kids.
+            <p> Filler Text
             </p>
         </div>
         <div className = "am-content-6">
