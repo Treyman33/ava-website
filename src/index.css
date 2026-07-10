@@ -154,7 +154,8 @@ code {
   color: var(--text-h);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link2:hover{
   background: var(--accent-bg);
   color: var(--text-h);
 }
@@ -497,7 +498,7 @@ code {
 }
 .t-hero-content {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -509,7 +510,75 @@ code {
   color: rgb(233, 224, 224);
   text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
 }
+.t-hero-content p {
+  font-family: 'Allura', cursive;
+  font-size: 2 rem;
+  font-weight: 400;
+  color: rgb(255, 232, 232);
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+}
+.am-hero {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+}
+.am-hero-img {
+    width: 100%;
+    height: 100%;
 
+    object-fit: cover;
+    object-position: 25% center;
+
+    display: block;
+}
+.am-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.18),
+            rgba(0,0,0,.05)
+        );
+}
+.am-hero-content {
+    position: absolute;
+
+    top: 50%;
+    left: 60%;
+
+    transform: translateY(-50%);
+
+    max-width: 500px;
+
+    color: white;
+
+    z-index: 2;
+}
+.am-hero-content h1 {
+    margin: 0;
+
+    font-family: 'Allura', cursive;
+    font-size: 6rem;
+    font-weight: 400;
+
+    color: white;
+
+    text-shadow: 0 3px 12px rgba(0,0,0,.45);
+}
+.am-hero-content p {
+    margin-top: 10px;
+
+    font-size: 1.25rem;
+    line-height: 1.6;
+
+    color: rgba(255,255,255,.95);
+
+    text-shadow: 0 2px 10px rgba(0,0,0,.4);
+}
 
 @media (max-width: 768px) {
   .navbar-left {
@@ -585,6 +654,27 @@ code {
     width: 100%;
     max-width: 500px;
     text-align: center;
+  }
+  .am-hero {
+    height: 400px;
+  }
+
+  .am-hero-content {
+  top: 30%;
+  left: 55%;
+  right: 8%;
+  }
+
+  .am-hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .am-hero-content p {
+    font-size: 1rem;
+  }
+
+  .am-hero-img {
+    object-position: 35% center;
   }
 }
 
