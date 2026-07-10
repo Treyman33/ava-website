@@ -18,8 +18,7 @@ function AboutMe() {
         <div className="am-hero-content">
           <h1>About Ava</h1>
           <p>
-            Helping children gain confidence, safety,
-            and a lifelong love for swimming.
+            Swimming, Winning, Binning. Just one stroke at a time.
           </p>
         </div>
       </section>
