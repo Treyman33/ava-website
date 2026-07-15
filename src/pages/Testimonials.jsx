@@ -8,9 +8,8 @@ function Testimonials() {
         <section id="hero" className="hero"> <img src={aw4} alt="Swimming lessons hero" className="t-hero-img" />
             <div className="t-hero-content">
                 <h1>Testimonials</h1>
-                <p>I want to thank everyone for </p>
-            </div>
-                
+                <p>Thank you to all the families that trusted me with their children. </p>
+            </div>     
           </section>
         
         </>

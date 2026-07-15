@@ -20,14 +20,11 @@ function AboutMe() {
 
         <div className="am-hero-content">
           <h1>About Ava</h1>
-          <p>
-            Swimming, Winning, Binning. Just one stroke at a time.
-          </p>
         </div>
       </section>
       <section className = "am-content">
         <div className = "am-content-1">
-            <h2> My Story</h2>
+            <h2>My Story:</h2>
             <p>Hi, my name is Ava Marcum! I am 22 years old and have been teaching swimming lessons every summer for the past 7 years.
                 I originally began to teach swimming lessons when I worked at Aqua Tots Swim School. After working there for *INSERT TIME HERE*,
                  I decided to begin giving private lessons as I felt that more indidivualized lessons would be more beneficial for the kids.
@@ -38,7 +35,7 @@ function AboutMe() {
             <img src={ap5} className = "am-img-1" />
         </div>
         <div className = "am-content-3">
-            <h2>My Life</h2>
+            <h2>My Life:</h2>
             <p> In the Spring of '26 I graduated from MidAmerican Nazarene University in Olathe, Kansas. I achieved a B.A. in Psychology
                 and a B.A. in Sociology. I am now attending Point Loma Nazarene University studying to obtain a M.A. in Clinical and Mental Health Counseling,
                 with a desire to work with adolescents.
@@ -48,8 +45,11 @@ function AboutMe() {
             <img src={ap7} className = "am-img-2" />
         </div>
         <div className = "am-content-5">
-            <h2>Who Am I?</h2>
-            <p> Filler Text
+            <h2>Experience:</h2>
+            <p> Outside of swimming lessons, I have worked alongside youths in a multitude of capacities: I have volunteered and mentored
+                high schoolers from my home church back in Kansas, worked as a babysitter for countless families for 10+ years, and even
+                worked as a substitute teacher for over a year. These roles have allowed me to be able to succesfully work with children of all
+                ages.
             </p>
         </div>
         <div className = "am-content-6">

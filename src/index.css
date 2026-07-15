@@ -210,7 +210,7 @@ code {
 }
 .hero-content h1 {
     font-family: 'Allura', cursive;
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 400;
     color: rgb(233, 224, 224);
     text-shadow: 2px 2px 10px rgba(0,0,0,.5);
@@ -515,14 +515,14 @@ code {
 }
 .t-hero-content h1 {
   font-family: 'Allura', cursive;
-  font-size: 5.5rem;
+  font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 400;
   color: rgb(233, 224, 224);
-  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 12px rgba(0,0,0,.5);
 }
 .t-hero-content p {
   font-family: 'Allura', cursive;
-  font-size: 2 rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   font-weight: 400;
   color: rgb(255, 232, 232);
   text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
@@ -556,7 +556,6 @@ code {
 }
 .am-hero-content {
     position: absolute;
-
     top: 50%;
     left: 60%;
 
@@ -569,26 +568,16 @@ code {
     z-index: 2;
 }
 .am-hero-content h1 {
-    margin: 0;
-
     font-family: 'Allura', cursive;
-    font-size: 6rem;
+    font-size: clamp(2.5rem, 10vw, 6rem);
     font-weight: 400;
+
 
     color: white;
 
     text-shadow: 0 3px 12px rgba(0,0,0,.45);
 }
-.am-hero-content p {
-    margin-top: 10px;
 
-    font-size: 1.25rem;
-    line-height: 1.6;
-
-    color: rgba(255,255,255,.95);
-
-    text-shadow: 0 2px 10px rgba(0,0,0,.4);
-}
 .am-content {
   display: flex;
   flex-direction: column;
@@ -613,8 +602,10 @@ code {
 }
 
 .am-img-1 {
-  height: 300px;
-  object-fit: scale-down;
+  width: min(100%, 500px);
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
   display: block;
   margin: 0 auto;
 }
@@ -642,7 +633,7 @@ code {
 
 .am-content-5 {
   width: min(100%, 1100px);
-  background: #e6e6e6;
+  background: #ffe5c0;
   border-radius: 16px;
   padding: 20px 30px;
   box-sizing: border-box;
@@ -660,9 +651,100 @@ code {
   margin: 0 auto;
 }
 
+.l-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translateY(-50%);
+    max-width: 500px;
+    color: white;
+    z-index: 2;
+}
+.l-hero-content h1 {
+    font-family: 'Allura', cursive;
+    font-size: clamp(2.5rem, 10vw, 6rem);
+    font-weight: 400;
+    color: white;
+    text-shadow: 0 3px 12px rgba(0,0,0,.45);
+}
 
+.l-hero-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
 
-@media (max-width: 768px) {
+.lessons-section {
+  width: min(100%, 1100px);
+  margin: 80px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.lesson-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+  margin: 0 auto 40px;
+
+  padding: 6px;
+
+  background: #f0e2c8;
+  border-radius: 999px;
+
+  box-shadow:
+    rgba(0, 0, 0, 0.08) 0 6px 16px;
+}
+
+.lesson-toggle button {
+  border: none;
+  background: transparent;
+
+  color: #6f533e;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  padding: 14px 28px;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.lesson-toggle button:hover {
+  background: rgba(160, 122, 85, 0.12);
+}
+
+.lesson-toggle button.active {
+  background: #8c6240;
+  color: white;
+
+  box-shadow:
+    rgba(0,0,0,.12) 0 6px 12px;
+}
+
+.lesson-content {
+  background: rgba(239, 228, 222, 0.75);
+  border: 1px solid rgba(223, 171, 128, 0.35);
+
+  border-radius: 24px;
+
+  padding: 40px;
+
+  box-shadow:
+    rgba(0,0,0,.08) 0 8px 20px;
+}
+
+@media (max-width: 1024px) {
   .navbar-left {
     width: 100%;
     display: flex;
@@ -755,7 +837,7 @@ code {
   }
 
   .am-hero-content {
-  top: 15%;
+  top: 25%;
   left: 30%;
   right: 4%;
   }
@@ -777,9 +859,28 @@ code {
   object-fit: cover;
   border-radius: 50%;
   }
+
+  .l-hero-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
 }
 
-@media (min-width: 1024px) {
+  .lesson-toggle {
+  width: 100%;
+  max-width: 360px;
+  }
+
+  .lesson-toggle button {
+  flex: 1;
+  padding: 12px 10px;
+  font-size: 0.75rem;
+  }
+
+  .lesson-content {
+  padding: 25px;
+  }
   :root {
     font-size: 18px;
   }
