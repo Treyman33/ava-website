@@ -8,14 +8,18 @@ import { useNavigate } from 'react-router-dom'
 
 
 const shuffleArray = (array) => {
-const shuffled = [...array]
+  const filtered = array.filter(
+    (review) => review.rating >= 4
+  )
 
-for (let i = shuffled.length - 1; i > 0; i--) {
-const j = Math.floor(Math.random() * (i + 1))
-;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
-}
+  const shuffled = [...filtered]
 
-return shuffled
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+
+  return shuffled
 }
 
 function Home() {

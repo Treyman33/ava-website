@@ -22,11 +22,15 @@ function Lessons() {
         </div>
         {lessonType === "individual" ? (
             <div className="lesson-content">
-                <p>TEST 1</p>
+                <p>1-on-1 Instruction</p>
+                <p>30 Minutes</p>
+                <p>Tailored Lessons to Fit Your Childs Needs.</p>
             </div>
         ) : (
         <div className="lesson-content">
-            <p>TEST 2</p>
+            <p>3-5 Students</p>
+            <p>30 Minutes</p>
+            <p>Best for Kids Who Are Picking Swimming Back Up After Some Time Away.</p>
         </div>
         )}
     </>
