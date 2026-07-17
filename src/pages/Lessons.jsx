@@ -12,27 +12,29 @@ function Lessons() {
                 <h1>Lessons</h1>
             </div>
         </section>
-        <div className="lesson-toggle">
-            <button className={lessonType === "individual" ? "active" : ""} onClick={() => setLessonType("individual")}>
-                Individual Lessons
-            </button>
-            <button className={lessonType === "group" ? "active" : ""} onClick={() => setLessonType("group")}>
-                Group Lessons
-            </button>
-        </div>
-        {lessonType === "individual" ? (
-            <div className="lesson-content">
-                <p>1-on-1 Instruction</p>
-                <p>30 Minutes</p>
-                <p>Tailored Lessons to Fit Your Childs Needs.</p>
+        <div className = "lessons-section">
+            <div className="lesson-toggle">
+                <button className={lessonType === "individual" ? "active" : ""} onClick={() => setLessonType("individual")}>
+                    Individual Lessons
+                </button>
+                <button className={lessonType === "group" ? "active" : ""} onClick={() => setLessonType("group")}>
+                    Group Lessons
+                </button>
             </div>
-        ) : (
-        <div className="lesson-content">
-            <p>3-5 Students</p>
-            <p>30 Minutes</p>
-            <p>Best for Kids Who Are Picking Swimming Back Up After Some Time Away.</p>
+            {lessonType === "individual" ? (
+                <div className="lesson-content">
+                    <p>1-on-1 Instruction</p>
+                    <p>30 Minutes</p>
+                    <p>Tailored Lessons to Fit Your Child's Needs.</p>
+                </div>
+            ) : (
+            <div className="lesson-content">
+                <p>3-5 Students</p>
+                <p>30 Minutes</p>
+                <p>Best for Kids Who Are Picking Swimming Back Up After Some Time Away.</p>
+            </div>
+            )}
         </div>
-        )}
     </>
   );
 }
