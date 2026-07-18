@@ -96,10 +96,10 @@ return (
 
       <div className="am-text1">
         <p>
-          Hello my name is Ava Marcum! I have been *VERB* swimming lessons
+          Hello my name is Ava Marcum! I have been teaching swim lessons
           for 7 years now. I started giving lessons when I worked as a
           lifeguard at AquaTots, then transitioned into giving personalized
-          and private lessons as I felt it better suited me.
+          and private lessons as I felt it would be more beneficial for the kids.
         </p>
       </div>
     </div>

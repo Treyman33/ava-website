@@ -1,8 +1,10 @@
 import Navbar3 from '../components/Navbar3.jsx'
 import aw4 from '../assets/aw4.jpg'
 import testimonials from '../data/testimonials.js'
+import { useState } from 'react'
 
 function Testimonials() {
+    const [searchTerm, setFirstName] = useState('');
     return (
         <>
         <Navbar3/>
@@ -19,27 +21,33 @@ function Testimonials() {
 
             <div className="t-box">
                 {/* Search / Filter / Sort Bar */}
+                <label> 
+                    Search:
+                    <input className = "t-input"></input>
+                </label>
+
+                
 
                 {/* Review List */}
                 {testimonials.map((t) => (
-                <div className="testimonial-card" key={t.id}>
-                    <div className="testimonial-header">
-                        <div className="testimonial-info">
-                            <h3 className="testimonial-name">
+                <div className="t-testimonial-card" key={t.id}>
+                    <div className="t-testimonial-header">
+                        <div className="t-testimonial-info">
+                            <h3 className="t-testimonial-name">
                                 {t.firstName} {t.lastName}
                             </h3>
 
-                            <span className="testimonial-rating">
+                            <span className="t-testimonial-rating">
                                 {"★".repeat(t.rating)}
                             </span>
                         </div>
 
-                        <span className="testimonial-date">
+                        <span className="t-testimonial-date">
                             {t.dateSubmitted}
                         </span>
                     </div>
-                    <div className="testimonial-divider"></div>
-                    <p className="testimonial-review">
+                    <div className="t-testimonial-divider"></div>
+                    <p className="t-testimonial-review">
                         {t.review}
                     </p>
                 </div>

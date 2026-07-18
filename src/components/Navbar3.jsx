@@ -14,7 +14,12 @@ function Navbar3() {
       </div>
 
       <div className="navbar-right">
-        <button className = "nav-link" onClick={() => scrollTo(bottom)}>
+        <button className = "nav-link" onClick={() => window.scrollTo({
+                bottom: 100,
+                behavior: 'smooth'
+              })
+            }
+        >
             Leave Your Own!
         </button>
         <div className="nav-links">
