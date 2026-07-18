@@ -8,12 +8,18 @@ function Testimonials() {
     let filteredTestimonials;
     if (searchTerm === ""){filteredTestimonials = testimonials}
     else {
-    filteredTestimonials = testimonials.filter(testimonial => 
-        testimonial.firstName.includes(searchTerm) || 
-        testimonial.lastName.includes(searchTerm) || 
-        testimonial.review.includes(searchTerm)
-    )
-    }
+    let lowerSearchTerm = searchTerm.toLowerCase()
+    filteredTestimonials = testimonials.filter(testimonial => {
+        const firstName = testimonial.firstName.toLowerCase()
+        const lastName = testimonial.lastName.toLowerCase()
+        const review = testimonial.review.toLowerCase()
+        return (
+            firstName.includes(lowerSearchTerm) ||
+            lastName.includes(lowerSearchTerm) ||
+            review.includes(lowerSearchTerm)
+        )
+    })
+}
     return (
         <>
         <Navbar3/>
@@ -33,8 +39,6 @@ function Testimonials() {
                 <label> 
                     Search: <input className = "t-search" value = {searchTerm} onChange={e => setSearchTerm(e.target.value)} placeholder="Search Here" />
                 </label>
-                
-                
 
                 {/* Review List */}
                 {filteredTestimonials.map((t) => (
