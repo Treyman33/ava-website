@@ -4,7 +4,16 @@ import testimonials from '../data/testimonials.js'
 import { useState } from 'react'
 
 function Testimonials() {
-    const [searchTerm, setFirstName] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
+    let filteredTestimonials;
+    if (searchTerm === ""){filteredTestimonials = testimonials}
+    else {
+    filteredTestimonials = testimonials.filter(testimonial => 
+        testimonial.firstName.includes(searchTerm) || 
+        testimonial.lastName.includes(searchTerm) || 
+        testimonial.review.includes(searchTerm)
+    )
+    }
     return (
         <>
         <Navbar3/>
@@ -22,36 +31,33 @@ function Testimonials() {
             <div className="t-box">
                 {/* Search / Filter / Sort Bar */}
                 <label> 
-                    Search:
-                    <input className = "t-input"></input>
+                    Search: <input className = "t-search" value = {searchTerm} onChange={e => setSearchTerm(e.target.value)} placeholder="Search Here" />
                 </label>
-
+                
                 
 
                 {/* Review List */}
-                {testimonials.map((t) => (
-                <div className="t-testimonial-card" key={t.id}>
-                    <div className="t-testimonial-header">
-                        <div className="t-testimonial-info">
-                            <h3 className="t-testimonial-name">
-                                {t.firstName} {t.lastName}
-                            </h3>
-
-                            <span className="t-testimonial-rating">
-                                {"★".repeat(t.rating)}
+                {filteredTestimonials.map((t) => (
+                    <div className="t-testimonial-card" key={t.id}>
+                        <div className="t-testimonial-header">
+                            <div className="t-testimonial-info">
+                                <h3 className="t-testimonial-name">
+                                    {t.firstName} {t.lastName}
+                                </h3>
+                                <span className="t-testimonial-rating">
+                                    {"★".repeat(t.rating)}
+                                </span>
+                            </div>
+                            <span className="t-testimonial-date">
+                                {t.dateSubmitted}
                             </span>
                         </div>
-
-                        <span className="t-testimonial-date">
-                            {t.dateSubmitted}
-                        </span>
+                        <div className="t-testimonial-divider"></div>
+                        <p className="t-testimonial-review">
+                            {t.review}
+                        </p>
                     </div>
-                    <div className="t-testimonial-divider"></div>
-                    <p className="t-testimonial-review">
-                        {t.review}
-                    </p>
-                </div>
-                ))}
+                    ))}
                 {/* Pagination */}
             </div>
         </section>
