@@ -1,7 +1,7 @@
 import Navbar3 from '../components/Navbar3.jsx'
 import aw4 from '../assets/aw4.jpg'
 import testimonials from '../data/testimonials.js'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 
 function Testimonials() {
@@ -11,11 +11,33 @@ function Testimonials() {
     const [dropDown2, setDropDown2] = useState(false);
     const [sortTerm, setSortTerm] = useState('');
     const [page, setPage] = useState(0);
+    const dropdownRef = useRef(null);
+    const dropdownRef2 = useRef(null);
+
+    useEffect(() => {
+    function handleClickOutside(event) {
+        if (
+            dropdownRef.current &&
+            !dropdownRef.current.contains(event.target) &&
+            dropdownRef2.current &&
+            !dropdownRef2.current.contains(event.target)
+        ) {
+            setDropDown(false);
+            setDropDown2(false);
+        }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
     let filteredTestimonials;
     let sortedTestimonials;
     if (searchTerm === ""){filteredTestimonials = testimonials}
     else {
-    let lowerSearchTerm = searchTerm.toLowerCase()
+    let lowerSearchTerm = searchTerm.trim().toLowerCase()
     filteredTestimonials = testimonials.filter(testimonial => {
         const firstName = testimonial.firstName.toLowerCase()
         const lastName = testimonial.lastName.toLowerCase()
@@ -92,29 +114,29 @@ function Testimonials() {
         if (dropDown2 === true && sortTerm === ''){
             return(
                 <div className = "t-dropdown-menu-2">           
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("fnAZ") , setDropDown2(false)}}> First Names: A → Z</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("fnZA") , setDropDown2(false)}}> First Names: Z → A</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("lnAZ") , setDropDown2(false)}}> Last Names: A → Z</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("lnZA") , setDropDown2(false)}}> Last Names: Z → A</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("rDsc") , setDropDown2(false)}}> Reviews: 5 → 1</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("rAsc") , setDropDown2(false)}}> Reviews: 1 → 5</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("dDsc") , setDropDown2(false)}}> Date: New → Old</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("dAsc") , setDropDown2(false)}}> Date: Old → New</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("fnAZ") , setDropDown2(false), setPage(0)}}> First Names: A → Z</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("fnZA") , setDropDown2(false), setPage(0)}}> First Names: Z → A</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("lnAZ") , setDropDown2(false), setPage(0)}}> Last Names: A → Z</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("lnZA") , setDropDown2(false), setPage(0)}}> Last Names: Z → A</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("rDsc") , setDropDown2(false), setPage(0)}}> Reviews: 5 → 1</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("rAsc") , setDropDown2(false), setPage(0)}}> Reviews: 1 → 5</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("dDsc") , setDropDown2(false), setPage(0)}}> Date: New → Old</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("dAsc") , setDropDown2(false), setPage(0)}}> Date: Old → New</button>
                 </div>
             )
         }
         else if(dropDown2 === true && sortTerm !== ''){
             return(
                 <div className = "t-dropdown-menu-2">
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("") , setDropDown2(false)}}> Remove Sort</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("fnAZ") , setDropDown2(false)}}> First Names: A → Z</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("fnZA") , setDropDown2(false)}}> First Names: Z → A</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("lnAZ") , setDropDown2(false)}}> Last Names: A → Z</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("lnZA") , setDropDown2(false)}}> Last Names: Z → A</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("rDsc") , setDropDown2(false)}}> Reviews: 5 → 1</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("rAsc") , setDropDown2(false)}}> Reviews: 1 → 5</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("dDsc") , setDropDown2(false)}}> Date: New → Old</button>
-                    <button className = "t-sort-button" onClick={() => {setSortTerm("dAsc") , setDropDown2(false)}}> Date: Old → New</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("") , setDropDown2(false), setPage(0)}}> Remove Sort</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("fnAZ") , setDropDown2(false), setPage(0)}}> First Names: A → Z</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("fnZA") , setDropDown2(false), setPage(0)}}> First Names: Z → A</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("lnAZ") , setDropDown2(false), setPage(0)}}> Last Names: A → Z</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("lnZA") , setDropDown2(false), setPage(0)}}> Last Names: Z → A</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("rDsc") , setDropDown2(false), setPage(0)}}> Reviews: 5 → 1</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("rAsc") , setDropDown2(false), setPage(0)}}> Reviews: 1 → 5</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("dDsc") , setDropDown2(false), setPage(0)}}> Date: New → Old</button>
+                    <button className = "t-sort-button" onClick={() => {setSortTerm("dAsc") , setDropDown2(false), setPage(0)}}> Date: Old → New</button>
                 </div>
             )
         }
@@ -162,12 +184,16 @@ function Testimonials() {
                             value={searchTerm} 
                             onChange={e => {
                                 setSearchTerm(e.target.value) 
-                                setPage = 0}} 
+                                setPage(0)
+                                setDropDown(false)
+                                setDropDown2(false)
+                                }
+                            } 
                             placeholder="Search Here" 
                         />
                     </label>
 
-                    <div className="t-dropdown-container">
+                    <div className="t-dropdown-container" ref={dropdownRef}>
                         <button 
                             className="t-dropdown" 
                             onClick={() => {setDropDown(!dropDown), setDropDown2(false)}}
@@ -177,7 +203,7 @@ function Testimonials() {
                         {dropDownMenu()}
                 </div>
 
-                <div className="t-dropdown-container">
+                <div className="t-dropdown-container" ref={dropdownRef2}>
                     <button 
                         className="t-dropdown" 
                         onClick={() => {setDropDown2(!dropDown2), setDropDown(false)}}
@@ -187,8 +213,10 @@ function Testimonials() {
                     {dropDownMenu2()}
                 </div>
             </div>
-
-                {sortedTestimonials.map((t) => (
+                {sortedTestimonials.length === 0 ? (
+                    <p>No testimonials found.</p>
+                ) : (
+                sortedTestimonials.map((t) => (
                     <div className="t-testimonial-card" key={t.id}>
                         <div className="t-testimonial-header">
                             <div className="t-testimonial-info">
@@ -208,8 +236,9 @@ function Testimonials() {
                             {t.review}
                         </p>
                     </div>
-                    ))}
-                {pagination()}
+                    ))
+                )}
+                {sortedTestimonials.length > 0 && pagination()}
             </div>
         </section>
         </>
