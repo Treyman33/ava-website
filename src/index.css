@@ -149,10 +149,6 @@ code {
   cursor: pointer;
 }
 
-.info-btn:hover {
-  background: var(--accent-bg);
-  color: var(--text-h);
-}
 
 .nav-link:hover,
 .nav-link2:hover{
@@ -250,12 +246,47 @@ code {
     rgba(0, 0, 0, 0.06) 0 6px 12px;
 }
 .info-btn {
-  padding: 2px 3px;
-  background: #dfab80;
-  color: #845535;
+  margin-top: auto;
+  align-self: flex-start;
+
+  padding: 0.8rem 1.8rem;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+
+  background: transparent;
+  color: var(--accent);
+
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 
   cursor: pointer;
-  
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.info-btn:hover {
+  background: #8c6240;
+  border-color: #8c6240;
+  color: white;
+}
+
+.info-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(160, 122, 85, 0.18);
+}
+.information-left,
+.information-middle,
+.information-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-btn {
+    margin-top: auto;
 }
 .calendar {
   flex: 1.55;
