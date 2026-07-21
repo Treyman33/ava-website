@@ -1087,6 +1087,202 @@ code {
   transform: translateY(0);
 }
 
+.testimonial-form-section {
+    width: min(90%, 650px);
+    margin: 70px auto;
+    padding: 40px;
+
+    background: rgba(239, 228, 222, 0.75);
+
+    border: 1px solid rgba(223, 171, 128, 0.35);
+    border-radius: 24px;
+
+    box-shadow:
+        rgba(0,0,0,.08) 0 8px 20px;
+}
+
+
+.testimonial-form-title {
+    font-family: 'Allura', cursive;
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    text-align: center;
+
+    color: #6f533e;
+
+    margin-bottom: 35px;
+}
+
+
+.testimonial-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+.testimonial-form-label {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-size: 1.2rem;
+    color: #6f533e;
+}
+
+
+.testimonial-form-input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 15px;
+
+    background: white;
+
+    border: 1px solid rgba(160,122,85,.35);
+
+    border-radius: 12px;
+
+    font-size: 1rem;
+
+    color: #51392f;
+}
+
+
+.testimonial-form-input:focus {
+    outline: none;
+
+    border-color: #8c6240;
+
+    box-shadow:
+        0 0 0 3px rgba(160,122,85,.15);
+}
+
+
+.testimonial-form-textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+
+.testimonial-submit-button {
+    align-self: center;
+
+    margin-top: 10px;
+
+    padding: 14px 40px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: #895f3e;
+
+    color: white;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        transform .2s ease;
+}
+
+
+.testimonial-submit-button:hover {
+    background: #5a3e27;
+
+    transform: translateY(-2px);
+}
+
+
+@media(max-width:600px){
+
+    .testimonial-form-section {
+
+        padding: 25px;
+
+        width: 90%;
+    }
+
+
+    .testimonial-form-title {
+
+        font-size: 3.5rem;
+    }
+
+
+    .ratingStars button {
+
+        font-size: 1.8rem;
+    }
+
+}
+
+.ratingContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.ratingStars button,
+.ratingClear button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    font-size: 2rem;
+    color: #f5b301;
+
+    padding: 0;
+}
+
+
+.ratingClear button {
+    font-size: 1.2rem;
+    color: #777;
+    margin-left: 10px;
+}
+
+
+.ratingStars button:hover {
+    transform: scale(1.15);
+}
+
+
+
+.testimonial-form-section button[type="submit"]:hover {
+    background: #b97038;
+    transform: translateY(-2px);
+}
+
+.form-error {
+    text-align: center;
+    color: #c0392b;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+
+    .testimonial-form-section {
+        padding: 25px;
+        margin: 50px auto;
+    }
+
+    .testimonial-form-title {
+        font-size: 3rem;
+    }
+
+    .ratingStars button {
+        font-size: 1.7rem;
+    }
+}
+
 @media (max-width: 1024px) {
   .navbar-left {
     width: 100%;

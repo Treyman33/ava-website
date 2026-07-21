@@ -2,8 +2,6 @@ import Navbar3 from '../components/Navbar3.jsx'
 import aw4 from '../assets/aw4.jpg'
 import testimonials from '../data/testimonials.js'
 import { useState, useEffect, useRef } from 'react'
-import { Form } from 'react-router-dom';
-
 
 function Testimonials() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -16,6 +14,7 @@ function Testimonials() {
     const [lastName, setLastName] = useState('');
     const [rating, setRating] = useState(0);
     const [review, setReview] = useState('');
+    const [errorMessage, setErrorMessage] = useState("");
     const dropdownRef = useRef(null);
     const dropdownRef2 = useRef(null);
 
@@ -191,10 +190,33 @@ function Testimonials() {
             </div>
         );
     }
-    function handleSubmit(){
-        const userReview = {firstName,lastName,rating,review};
-        console.log(userReview);
+    function handleSubmit(event) {
+    event.preventDefault();
+    if (
+        !firstName.trim() ||
+        !lastName.trim() ||
+        rating === 0 ||
+        !review.trim()
+    ) {
+        setErrorMessage("Please fill out all fields before submitting.");
+        return;
     }
+    setErrorMessage("");
+    const userReview = {
+        firstName: firstName.trim(),
+        lastName: lastName.trim(),
+        rating,
+        review: review.trim(),
+        dateSubmitted: new Date()
+    };
+
+    console.log(userReview);
+
+    setFirstName("");
+    setLastName("");
+    setRating(0);
+    setReview("");
+}   
     return (
         
         <>
@@ -276,13 +298,35 @@ function Testimonials() {
                 {sortedTestimonials.length > 0 && pagination()}
             </div>
         </section>
-        <form onSubmit={handleSubmit}>
-            <label>First Name <input type='text' value={firstName} onChange={e => {setFirstName(e.target.value) }}/></label>
-            <label>Last Name <input type='text' value={lastName} onChange={e => {setLastName(e.target.value) }}/></label>
-            <label>Rating{ratingMenu()}</label>
-            <label>Review <input type='textarea' value={review} onChange={e => {setReview(e.target.value) }}/></label>
-            <button type='submit'>Submit</button>
-        </form>
+        <section className="testimonial-form-section">
+            <h2 className="testimonial-form-title">
+                Leave Your Testimonial!
+            </h2>
+            <form className="testimonial-form" onSubmit={handleSubmit}>
+                <label className="testimonial-form-label">
+                    First Name 
+                    <input className="testimonial-form-input" type="text" value={firstName} onChange={e => {setFirstName(e.target.value)}}/>
+                </label>
+                <label className="testimonial-form-label">
+                    Last Name 
+                    <input className="testimonial-form-input" type="text" value={lastName} onChange={e => {setLastName(e.target.value)}}/>
+                </label>
+                <label className="testimonial-form-label">
+                    Rating
+                    {ratingMenu()}
+                </label>
+                <label className="testimonial-form-label">
+                    Review 
+                    <textarea className="testimonial-form-input testimonial-form-textarea" value={review} onChange={e => {setReview(e.target.value)}}/>
+                </label>
+                {errorMessage && <p className="form-error">{errorMessage}</p>
+                }
+                <button className="testimonial-submit-button" type="submit">
+                    Submit
+                </button>
+
+            </form>
+        </section>
         </>
     );
 }
