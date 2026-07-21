@@ -2,6 +2,7 @@ import Navbar3 from '../components/Navbar3.jsx'
 import aw4 from '../assets/aw4.jpg'
 import testimonials from '../data/testimonials.js'
 import { useState, useEffect, useRef } from 'react'
+import { Form } from 'react-router-dom';
 
 
 function Testimonials() {
@@ -11,6 +12,10 @@ function Testimonials() {
     const [dropDown2, setDropDown2] = useState(false);
     const [sortTerm, setSortTerm] = useState('');
     const [page, setPage] = useState(0);
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [rating, setRating] = useState(0);
+    const [review, setReview] = useState('');
     const dropdownRef = useRef(null);
     const dropdownRef2 = useRef(null);
 
@@ -159,7 +164,37 @@ function Testimonials() {
             </div>
         );
     }
-
+    function ratingMenu() {
+        const numbers = [1, 2, 3, 4, 5];
+        return (
+            <div className="ratingContainer">
+                {numbers.map((n) => (
+                    <div className="ratingStars" key={n}>
+                        <button 
+                            onClick={() => setRating(n)} 
+                            type="button"
+                        >
+                            {rating >= n ? "★" : "☆"}
+                        </button>
+                    </div>
+                ))}
+                {rating !== 0 && (
+                    <div className="ratingClear">
+                        <button 
+                            onClick={() => setRating(0)} 
+                            type="button"
+                        >
+                            x
+                        </button>
+                    </div>
+                )}
+            </div>
+        );
+    }
+    function handleSubmit(){
+        const userReview = {firstName,lastName,rating,review};
+        console.log(userReview);
+    }
     return (
         
         <>
@@ -241,6 +276,13 @@ function Testimonials() {
                 {sortedTestimonials.length > 0 && pagination()}
             </div>
         </section>
+        <form onSubmit={handleSubmit}>
+            <label>First Name <input type='text' value={firstName} onChange={e => {setFirstName(e.target.value) }}/></label>
+            <label>Last Name <input type='text' value={lastName} onChange={e => {setLastName(e.target.value) }}/></label>
+            <label>Rating{ratingMenu()}</label>
+            <label>Review <input type='textarea' value={review} onChange={e => {setReview(e.target.value) }}/></label>
+            <button type='submit'>Submit</button>
+        </form>
         </>
     );
 }
