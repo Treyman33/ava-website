@@ -1,4 +1,4 @@
-import Navbar2 from '../components/Navbar2.jsx'
+import Navbar from '../components/Navbar.jsx'
 import { useState } from 'react'
 import ap9 from '../assets/ap9.jpg'
  
@@ -6,7 +6,7 @@ function Lessons() {
     const [lessonType, setLessonType] = useState("individual");
     return (
     <>
-        <Navbar2/>
+        <Navbar/>
         <section id="hero" className="hero"> <img src={ap9} alt="Swimming lessons hero" className="l-hero-img" />
             <div className="l-hero-content">
                 <h1>Lessons</h1>

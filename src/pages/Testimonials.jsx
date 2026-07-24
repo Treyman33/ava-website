@@ -1,4 +1,4 @@
-import Navbar3 from '../components/Navbar3.jsx'
+import Navbar from '../components/Navbar.jsx'
 import aw4 from '../assets/aw4.jpg'
 import { useState, useEffect, useRef } from 'react'
 import { supabase } from '../supabase.js'
@@ -264,7 +264,7 @@ function Testimonials() {
 
     return (
         <>
-            <Navbar3/>
+            <Navbar/>
             <section id="hero" className="hero">
                 <img src={aw4} alt="Swimming lessons hero" className="t-hero-img" />
                 <div className="t-hero-content">

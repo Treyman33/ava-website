@@ -1,6 +1,8 @@
 import tempLogo from '../assets/tempLogo.png'
+import { useNavigate } from 'react-router-dom'
 
 function Navbar() {
+  const navigate = useNavigate();
   return (
     <header className="navbar">
       <div className="navbar-left">
@@ -13,49 +15,20 @@ function Navbar() {
 
       <div className="navbar-right">
         <div className="nav-links">
-          <button
-            className="nav-link"
-            onClick={() =>
-              window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-              })
-            }
-          >
+            <button className="nav-link" onClick={() => navigate('/')}>
             Home
           </button>
 
-          <button
-            className="nav-link"
-            onClick={() =>
-              document
-                .getElementById('about-me')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
-          >
+          <button className="nav-link" onClick={() => navigate('/about')}>
             About Me
           </button>
 
-          <button
-            className="nav-link"
-            onClick={() =>
-              document
-                .getElementById('testimonials')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
-          >
+          <button className="nav-link" onClick={() => navigate('/Testimonials')}>
             Testimonials
           </button>
 
-          <button
-            className="nav-link"
-            onClick={() =>
-              document
-                .getElementById('rates')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
-          >
-            Rates
+          <button className="nav-link" onClick={() => navigate('/Lessons')}>
+            Lessons
           </button>
         </div>
 

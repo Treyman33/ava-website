@@ -1,4 +1,4 @@
-import Navbar2 from "../components/Navbar2";
+import Navbar from "../components/Navbar";
 import ap6 from "../assets/ap6.jpg";
 import ap5 from "../assets/ap5.jpg"
 import ap7 from "../assets/ap7.jpg"
@@ -7,7 +7,7 @@ import ap8 from "../assets/ap8.jpg"
 function AboutMe() {
   return (
     <>
-      <Navbar2 />
+      <Navbar />
 
       <section className="am-hero">
         <img

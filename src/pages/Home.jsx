@@ -1,6 +1,7 @@
 import ap from '../assets/ap.png'
 import ap2 from '../assets/ap2.jpg'
 import ap3 from '../assets/ap3.jpg'
+import ap11 from '../assets/ap11.jpg'
 import Navbar from '../components/Navbar.jsx'
 import testimonials from '../data/testimonials.js'
 import { useState, useEffect } from 'react'
@@ -42,6 +43,7 @@ return (
   </section>
 
   <section className="sectional">
+    <img src={ap11} className="info-background" alt="" />
     <div className="info-section">
       <div className="information-left">
         <h2>My Story</h2>
