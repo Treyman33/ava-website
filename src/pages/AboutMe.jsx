@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import ap10 from "../assets/ap10.jpg";
 import ap6 from "../assets/ap6.jpg";
 import ap5 from "../assets/ap5.jpg"
 import ap7 from "../assets/ap7.jpg"
@@ -23,6 +24,7 @@ function AboutMe() {
         </div>
       </section>
       <section className = "am-content">
+        <img src={ap10} className="am-background" alt="" />
         <div className = "am-content-1">
             <h2>My Story:</h2>
             <p>Hi, my name is Ava Marcum! I am 22 years old and have been teaching swimming lessons every summer for the past 7 years.
