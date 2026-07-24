@@ -43,8 +43,8 @@ return (
   </section>
 
   <section className="sectional">
-    <img src={ap11} className="info-background" alt="" />
     <div className="info-section">
+      <img src={ap11} className="info-background" alt="" />
       <div className="information-left">
         <h2>My Story</h2>
         <p>

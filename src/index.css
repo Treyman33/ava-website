@@ -238,16 +238,15 @@ code {
 .info-background {
     position: absolute;
 
-    width: 48.6%;
-    height: 44%;
-    
-    top: 62%;
-    left: 8%;
+    inset: 0;
 
-    border-radius: 21px;
+    width: 100%;
+    height: 100%;
 
     object-fit: cover;
     object-position: center;
+
+    border-radius: inherit;
 
     z-index: 0;
 }
@@ -818,7 +817,6 @@ code {
 #testimonials {
     scroll-margin-top: 90px;
   }
-/* Testimonial Controls */
 
 .t-controls {
   display: flex;
@@ -1342,23 +1340,6 @@ code {
     flex-direction: column;
     padding: 25px;
   }
-
-  .info-background {
-    position: absolute;
-
-    width: 91%;
-    height: 78.7%;
-    
-    top: 68%;
-    left: 4.8%;
-
-    border-radius: 21px;
-
-    object-fit: cover;
-    object-position: center;
-
-    z-index: 0;
-}
 
   .information-left,
   .information-middle,
