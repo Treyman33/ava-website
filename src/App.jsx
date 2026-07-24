@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom"
+import { Analytics } from '@vercel/analytics/react';
 
 import Home from './pages/Home.jsx'
 import AboutMe from './pages/AboutMe.jsx'
@@ -17,6 +18,8 @@ function App() {
         <Route path="/lessons" element={<Lessons />} />
         <Route path="/testimonials" element={<Testimonials />} />
       </Routes>
+
+      <Analytics />
     </>
   )
 }
