@@ -2,6 +2,7 @@ import ap from '../assets/ap.png'
 import ap2 from '../assets/ap2.jpg'
 import ap3 from '../assets/ap3.jpg'
 import ap11 from '../assets/ap11.jpg'
+import ap12 from '../assets/ap12.jpg'
 import Navbar from '../components/Navbar.jsx'
 import testimonials from '../data/testimonials.js'
 import { useState, useEffect } from 'react'
@@ -122,8 +123,8 @@ return (
   </section>
 
   <section id="testimonials" className="testimonials">
+    <img src={ap12} className="testimonials-background" alt="" />
     <h1 className="section-title">Testimonials</h1>
-
     <div className="testimonial-container">
       {shuffledTestimonials.slice(0, 6).map((t, i) => (
         <div className="testimonial-card" key={i}>
