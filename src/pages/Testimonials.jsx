@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar.jsx'
 import aw4 from '../assets/aw4.jpg'
 import { useState, useEffect, useRef } from 'react'
 import { supabase } from '../supabase.js'
+import ap13 from '../assets/ap13.jpg'
 
 function Testimonials() {
     const [testimonials, setTestimonials] = useState([]);
@@ -272,7 +273,18 @@ function Testimonials() {
                     <p>Thank you to all the families that trusted me with their children.</p>
                 </div>
             </section>
-
+            <div
+                className="t-page-background"
+                style={{
+                    backgroundImage: `
+                    linear-gradient(
+                        rgba(255,255,255,0.9),
+                        rgba(255,255,255,0.9)
+                    ),
+                    url(${ap13})
+                    `
+                }}
+            >
             <section className="t-section">
                 <h2 className="section-title">
                     Hear From the Families
@@ -356,6 +368,7 @@ function Testimonials() {
                     </button>
                 </form>
             </section>
+            </div>
         </>
     );
 }
