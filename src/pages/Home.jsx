@@ -101,7 +101,7 @@ return (
         <p>
           Hello my name is Ava Marcum! I have been teaching swim lessons
           for 7 years now. I started giving lessons when I worked as a
-          lifeguard at AquaTots, then transitioned into giving personalized
+          swim instrutor at a public swimming school, then transitioned into giving personalized
           and private lessons as I felt it would be more beneficial for the kids.
         </p>
       </div>
@@ -156,13 +156,13 @@ return (
     <div className="rates">
       <div className="privateRates">
         <h2>Private Lessons</h2>
-        <p>Individualized + Private Lessons (30 min) - $55 per Child</p>
+        <p>Individualized + Private Lessons (30 min) - $50 per Child</p>
         <p>Infants [0 - 2 y/o] (15 min) - $30 per Child</p>
       </div>
 
       <div className="groupRates">
         <h2>Group Lessons</h2>
-        <p>Group Lessons (30 min) - $45 per Child</p>
+        <p>Group Lessons (30 min) - $40 per Child</p>
       </div>
     </div>
   </section>

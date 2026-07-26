@@ -30,6 +30,9 @@ function Navbar() {
           <button className="nav-link" onClick={() => navigate('/Lessons')}>
             Lessons
           </button>
+          <button className='nav-link' onClick={() => navigate('/FAQs')}>
+            FAQs
+          </button>
         </div>
 
         <button

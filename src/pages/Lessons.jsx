@@ -26,12 +26,19 @@ function Lessons() {
                     <p>1-on-1 Instruction</p>
                     <p>30 Minutes</p>
                     <p>Tailored Lessons to Fit Your Child's Needs.</p>
+                    <p>Rates:</p> 
+                    <p>• Regular $50 / 30 min Lesson </p>
+                    <p>• Infant (0 - 2 years old) $30 / 30 min Lesson</p>
                 </div>
             ) : (
             <div className="lesson-content">
-                <p>3-5 Students</p>
+                <p>2-3 Students Per Group Lesson</p>
                 <p>30 Minutes</p>
+                <p>Exclusive to siblings or families that know each other</p>
+                <p>Best if kids have similar swimming abilities</p>
                 <p>Best for Kids Who Are Picking Swimming Back Up After Some Time Away.</p>
+                <p>Rates:</p> 
+                <p>• $40 per Student / 30 min Lesson </p>
             </div>
             )}
         </div>
