@@ -101,7 +101,7 @@ return (
         <p>
           Hello my name is Ava Marcum! I have been teaching swim lessons
           for 7 years now. I started giving lessons when I worked as a
-          swim instrutor at a public swimming school, then transitioned into giving personalized
+          swim instructor at a public swimming school, then transitioned into giving personalized
           and private lessons as I felt it would be more beneficial for the kids.
         </p>
       </div>

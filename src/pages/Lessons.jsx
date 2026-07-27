@@ -70,7 +70,7 @@ function Lessons() {
                                 <div className="lesson-facts">
                                     <div className="lesson-fact">
                                         <span>Lesson Length</span>
-                                        <strong>30 Minutes</strong>
+                                        <strong>Regular : 30 Minutes <br /> Infant : 15 Minutes</strong>
                                     </div>
 
                                     <div className="lesson-fact">
