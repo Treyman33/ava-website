@@ -397,8 +397,9 @@ function Lessons() {
                         confident.
                     </p>
 
-                    <a href="/contact" className="lessons-cta-button">
-                        Contact Me
+                    <a onClick={() =>window.open('https://forms.gle/yK6MQFgN2CxF2DKy8','_blank')} 
+                        className="lessons-cta-button">
+                        Client Intake
                     </a>
                 </section>
             </main>
