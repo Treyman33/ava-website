@@ -265,10 +265,6 @@ function Lessons() {
                             </li>
                         </ul>
 
-                        <p className="policy-note">
-                            Please make sure these policies match how you
-                            actually plan to handle cancellations and payments.
-                        </p>
                     </div>
 
                     <div className="recommendations-card">

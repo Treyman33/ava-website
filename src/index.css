@@ -964,15 +964,6 @@ code {
   background: #f0e2c8;
 }
 
-.policy-note {
-  margin: 1.5rem 0 0;
-  padding: 1rem;
-  border-left: 4px solid #8c6240;
-  background: #f7efe4;
-  font-size: .9rem;
-  line-height: 1.55;
-}
-
 .faq-grid { grid-template-columns: repeat(2, 1fr); max-width: 1050px; margin: auto; }
 .faq-card { padding: 1.75rem; }
 
