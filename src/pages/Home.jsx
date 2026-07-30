@@ -92,7 +92,13 @@ return (
   </section>
 
   <section id="about-me" className="about-me-section">
-    <h1 className="section-title">About Me</h1>
+    <div className="section-header">
+        <p className="section-eyebrow">Meet Your Instructor</p>
+        <h1 className="section-title">About Me</h1>
+        <p className="section-description">
+            Learn more about my experience, teaching philosophy, and passion for helping swimmers build confidence in the water.
+        </p>
+    </div>
 
     <div className="about-me">
       <img src={ap2} alt="about-me-img" className="about-me-img1" />
@@ -124,7 +130,13 @@ return (
 
   <section id="testimonials" className="testimonials">
     <img src={ap12} className="testimonials-background" alt="" />
-    <h1 className="section-title">Testimonials</h1>
+    <div className="section-header">
+        <p className="section-eyebrow">Trusted by Families</p>
+        <h1 className="section-title">Testimonials</h1>
+        <p className="section-description">
+            Hear what parents and swimmers have to say about their experience with Me!
+        </p>
+    </div>
     <div className="testimonial-container">
       {shuffledTestimonials.slice(0, 6).map((t, i) => (
         <div className="testimonial-card" key={i}>
@@ -151,8 +163,13 @@ return (
   </section>
 
   <section id="rates" className="rates-section">
-    <h1 className="section-title">Rates</h1>
-
+    <div className="section-header">
+        <p className="section-eyebrow">Simple Pricing</p>
+        <h1 className="section-title">Rates</h1>
+        <p className="section-description">
+            Flexible lesson options designed to fit your swimmer's needs and your family's schedule.
+        </p>
+    </div>
     <div className="rates">
       <div className="privateRates">
         <h2>Private Lessons</h2>
