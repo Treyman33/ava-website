@@ -197,24 +197,29 @@ function Testimonials() {
         const numbers = [1, 2, 3, 4, 5];
 
         return (
-            <div className="ratingContainer">
-                {numbers.map((n) => (
-                    <div className="ratingStars" key={n}>
-                        <button 
-                            onClick={() => setRating(n)} 
+        <div className="ratingContainer">
+                <div className="ratingStars">
+                    {numbers.map((n) => (
+                        <button
+                            key={n}
                             type="button"
+                            onClick={() => setRating(n)}
+                            aria-label={`Select ${n} star${n > 1 ? "s" : ""}`}
+                            aria-pressed={rating === n}
                         >
-                            {rating >= n ? "★" : "☆"}
+                            {rating >= n ? "\u2605" : "\u2606"}
                         </button>
-                    </div>
-                ))}
-                {rating !== 0 && (
+                    ))}
+                </div>
+
+                {rating > 0 && (
                     <div className="ratingClear">
-                        <button 
-                            onClick={() => setRating(0)} 
+                        <button
                             type="button"
+                            onClick={() => setRating(0)}
+                            aria-label="Clear rating"
                         >
-                            x
+                            ×
                         </button>
                     </div>
                 )}
@@ -285,7 +290,7 @@ function Testimonials() {
                     `
                 }}
             >
-            <section className="t-section">
+            <section className="section-header">
                 <h2 className="section-title">
                     Hear From the Families
                 </h2>

@@ -1465,7 +1465,6 @@ code {
 
 
     .ratingStars button {
-
         font-size: 1.8rem;
     }
 
@@ -1483,7 +1482,7 @@ code {
     background: none;
     border: none;
     cursor: pointer;
-
+    
     font-size: 2rem;
     color: #f5b301;
 
@@ -2061,4 +2060,21 @@ iframe {
     opacity: 1;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.45);
   }
+}
+
+.ratingContainer .ratingStars button {
+    font-family:
+        Arial,
+        "Segoe UI Symbol",
+        "Apple Symbols",
+        "Noto Sans Symbols 2",
+        sans-serif !important;
+
+    font-variant-emoji: text;
+    font-size: 2rem;
+    color: #f5b301;
+}
+
+.ratingClear button {
+    font-family: Arial, sans-serif;
 }
