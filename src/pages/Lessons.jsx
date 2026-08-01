@@ -12,7 +12,7 @@ function Lessons() {
             <section id="hero" className="hero">
                 <img
                     src={ap9}
-                    alt="Child participating in a swimming lesson"
+                    alt="Lessons Hero Image"
                     className="l-hero-img"
                 />
 
