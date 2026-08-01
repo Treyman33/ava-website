@@ -164,10 +164,10 @@ return (
 
   <section id="rates" className="rates-section">
     <div className="section-header">
-        <p className="section-eyebrow">Simple Pricing</p>
+        <p className="section-eyebrow">Fair Pricing</p>
         <h1 className="section-title">Rates</h1>
         <p className="section-description">
-            Flexible lesson options designed to fit your swimmer's needs and your family's schedule.
+            Lesson options designed to fit your swimmer's needs and your family's schedule.
         </p>
     </div>
     <div className="rates">
