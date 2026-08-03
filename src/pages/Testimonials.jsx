@@ -3,6 +3,7 @@ import aw4 from '../assets/aw4.jpg'
 import { useState, useEffect, useRef } from 'react'
 import { supabase } from '../supabase.js'
 import ap13 from '../assets/ap13.jpg'
+import { useNavigate } from 'react-router-dom'
 
 function Testimonials() {
     const [testimonials, setTestimonials] = useState([]);

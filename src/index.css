@@ -2078,3 +2078,264 @@ iframe {
 .ratingClear button {
     font-family: Arial, sans-serif;
 }
+
+/* =========================================
+   FAQ PAGE
+========================================= */
+
+.lesson-faq-section {
+  padding: 4.5rem 8%;
+  background: rgba(239, 228, 222, 0.75);
+}
+
+/* Main heading at the top of the FAQ section */
+.lesson-faq-section > .section-heading {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.lesson-faq-section > .section-heading .section-eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.13rem;
+  text-transform: uppercase;
+}
+
+.lesson-faq-section > .section-heading h2 {
+  margin: 0.35rem 0 1rem;
+  color: #6f533e;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.lesson-faq-section > .section-heading > p:last-child {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #6f6259;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   FAQ GRID
+========================================= */
+
+.lesson-faq-section .faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   CATEGORY HEADINGS
+   Before Booking, Scheduling, Weather, etc.
+========================================= */
+
+.lesson-faq-section .faq-grid > .section-heading {
+  grid-column: 1 / -1;
+
+  max-width: none;
+  margin: 2.5rem 0 0.25rem;
+  padding-bottom: 0.75rem;
+
+  text-align: left;
+  border-bottom: 2px solid rgba(160, 122, 85, 0.3);
+}
+
+.lesson-faq-section .faq-grid > .section-heading:first-child {
+  margin-top: 0;
+}
+
+.lesson-faq-section .faq-grid > .section-heading h3 {
+  margin: 0;
+  color: #6f533e;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   FAQ CARDS
+========================================= */
+
+.lesson-faq-section .faq-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  padding: 1.75rem;
+
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.lesson-faq-section .faq-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0 14px 24px -8px,
+    rgba(0, 0, 0, 0.06) 0 6px 10px -4px;
+}
+
+.lesson-faq-section .faq-card h3 {
+  margin: 0 0 0.75rem;
+
+  color: #6f533e;
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.lesson-faq-section .faq-card p {
+  margin: 0;
+
+  color: #6f6259;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.lessons-cta {
+  padding: 4.5rem 8%;
+  text-align: center;
+
+  color: white;
+  background: #6f533e;
+}
+
+.lessons-cta .section-eyebrow {
+  margin: 0;
+  color: #f0e2c8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.13rem;
+  text-transform: uppercase;
+}
+
+.lessons-cta h2 {
+  margin: 0.5rem 0 1rem;
+
+  color: white;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.lessons-cta > p:not(.section-eyebrow) {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.lessons-cta-button {
+  display: inline-block;
+
+  padding: 0.95rem 1.75rem;
+  border: 2px solid white;
+  border-radius: 999px;
+
+  background: white;
+  color: #6f533e;
+
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.lessons-cta-button:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .lesson-faq-section {
+    padding: 4rem 6%;
+  }
+
+  .lesson-faq-section .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-faq-section .faq-grid > .section-heading {
+    grid-column: 1;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .lesson-faq-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .lesson-faq-section > .section-heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .lesson-faq-section > .section-heading h2 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+
+  .lesson-faq-section > .section-heading > p:last-child {
+    font-size: 1rem;
+  }
+
+  .lesson-faq-section .faq-grid {
+    gap: 1rem;
+  }
+
+  .lesson-faq-section .faq-grid > .section-heading {
+    margin-top: 2rem;
+  }
+
+  .lesson-faq-section .faq-grid > .section-heading h3 {
+    font-size: 1.5rem;
+  }
+
+  .lesson-faq-section .faq-card {
+    padding: 1.4rem;
+    border-radius: 16px;
+  }
+
+  .lessons-cta {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .lessons-cta-button {
+    width: 100%;
+    max-width: 320px;
+  }
+}

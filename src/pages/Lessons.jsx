@@ -360,25 +360,11 @@ function Lessons() {
                             </p>
                         </article>
 
-                        <article className="faq-card">
-                            <h3>What should my child bring?</h3>
-                            <p>
-                                Please bring a swimsuit, towel, water bottle, and
-                                goggles if your child uses them. Infants and
-                                toddlers may also need an appropriate swim
-                                diaper.
-                            </p>
-                        </article>
+                        <a onClick={() => navigate('/FAQs')} 
+                        className="lessons-cta-button">
+                        More FAQs
+                        </a>
 
-                        <article className="faq-card">
-                            <h3>What happens during bad weather?</h3>
-                            <p>
-                                Outdoor lessons may be postponed due to
-                                lightning, severe weather, or unsafe pool
-                                conditions. You will be contacted about
-                                rescheduling when necessary.
-                            </p>
-                        </article>
                     </div>
                 </section>
 

@@ -23,259 +23,87 @@ function FAQs(){
             </section>
 
             <main className="lessons-page">
-
-                <section className="lesson-selection-section">
-                    <div className="section-heading">
-                        <p className="section-eyebrow">Have Any Questions?</p>
-                        <h2>Find Out the Answers to Questions I am Commonly Asked</h2>
-                        <p>
-                            These questions are the most common ones I receive! If you have your own please email me using the button below,
-                        </p>
-                    </div>
-
-                        <div className="lesson-details-card">
-                            <div className="lesson-description">
-                                <p className="lesson-label">Private Instruction</p>
-                                <h3>Individual Swim Lessons</h3>
-
-                                <p>
-                                    Individual lessons provide one-on-one
-                                    instruction designed around your swimmer's
-                                    specific needs. These lessons are ideal for
-                                    beginners, nervous swimmers, children working
-                                    toward water independence, or experienced
-                                    swimmers wanting to improve their technique.
-                                </p>
-
-                                <div className="lesson-facts">
-                                    <div className="lesson-fact">
-                                        <span>Lesson Length</span>
-                                        <strong>Regular : 30 Minutes <br /> Infant : 15 Minutes</strong>
-                                    </div>
-
-                                    <div className="lesson-fact">
-                                        <span>Class Size</span>
-                                        <strong>1 Swimmer</strong>
-                                    </div>
-
-                                    <div className="lesson-fact">
-                                        <span>Instruction</span>
-                                        <strong>Fully Personalized</strong>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="pricing-card">
-                                <p className="pricing-title">Lesson Rates</p>
-
-                                <div className="price-option">
-                                    <div>
-                                        <h4>Regular Lesson</h4>
-                                        <p>For swimmers ages 3 and older</p>
-                                    </div>
-
-                                    <div className="price">
-                                        <strong>$50</strong>
-                                        <span>per lesson</span>
-                                    </div>
-                                </div>
-
-                                <div className="price-option">
-                                    <div>
-                                        <h4>Infant Lesson</h4>
-                                        <p>For swimmers ages 0–2</p>
-                                    </div>
-
-                                    <div className="price">
-                                        <strong>$30</strong>
-                                        <span>per lesson</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </section>
-
-                <section className="skills-section">
-                    <div className="section-heading">
-                        <p className="section-eyebrow">Skill Development</p>
-                        <h2>What Swimmers Can Work On</h2>
-                        <p>
-                            Lesson content depends on each swimmer's current
-                            ability, comfort level, and goals.
-                        </p>
-                    </div>
-
-                    <div className="skills-grid">
-                        <article className="skill-card">
-                            <h3>Beginning Swimmers</h3>
-
-                            <ul>
-                                <li>Becoming comfortable in the water</li>
-                                <li>Safely entering and exiting the pool</li>
-                                <li>Blowing bubbles and breath control</li>
-                                <li>Front and back floating</li>
-                                <li>Kicking and basic arm movements</li>
-                                <li>Building independent swimming skills</li>
-                            </ul>
-                        </article>
-
-                        <article className="skill-card">
-                            <h3>Intermediate Swimmers</h3>
-
-                            <ul>
-                                <li>Freestyle technique</li>
-                                <li>Backstroke technique</li>
-                                <li>Side breathing</li>
-                                <li>Treading water</li>
-                                <li>Deep-water confidence</li>
-                                <li>Improving endurance and coordination</li>
-                            </ul>
-                        </article>
-
-                        <article className="skill-card">
-                            <h3>Advanced Swimmers</h3>
-
-                            <ul>
-                                <li>Breaststroke development</li>
-                                <li>Butterfly fundamentals</li>
-                                <li>Starts and turns</li>
-                                <li>Stroke refinement</li>
-                                <li>Swimming efficiency</li>
-                                <li>Competitive swimming preparation</li>
-                            </ul>
-                        </article>
-                    </div>
-                </section>
-
-                <section className="information-section">
-                    <div className="policy-card">
-                        <p className="section-eyebrow">Important Information</p>
-                        <h2>Cancellation Policy</h2>
-
-                        <ul>
-                            <li>
-                                Please provide at least 24 hours' notice when
-                                canceling or rescheduling a lesson.
-                            </li>
-
-                            <li>
-                                Lessons canceled with less than 24 hours' notice
-                                will be charged the full lesson price.
-                            </li>
-
-                            <li>
-                                If weather, lightning, or unsafe pool conditions
-                                prevent a lesson, the lesson can be rescheduled
-                                at no additional cost.
-                            </li>
-
-                            <li>
-                                If your swimmer is sick, please contact me as
-                                soon as possible before the scheduled lesson.
-                            </li>
-
-                            <li>
-                                Swimmers who arrive late may receive a shortened
-                                lesson so that the following lesson can begin on
-                                time.
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <div className="recommendations-card">
-                        <p className="section-eyebrow">Preparing for Lessons</p>
-                        <h2>Parent Recommendations</h2>
-
-                        <ul>
-                            <li>Arrive approximately 5–10 minutes early.</li>
-                            <li>
-                                Have your swimmer dressed and ready before the
-                                lesson begins.
-                            </li>
-                            <li>Bring a swimsuit, towel, and water bottle.</li>
-                            <li>
-                                Goggles are recommended, especially for swimmers
-                                practicing strokes.
-                            </li>
-                            <li>
-                                Apply sunscreen before outdoor lessons when
-                                needed.
-                            </li>
-                            <li>
-                                Encourage your swimmer, but avoid coaching from
-                                the side of the pool during the lesson.
-                            </li>
-                            <li>
-                                Celebrate small improvements and keep practice
-                                positive between lessons.
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section className="lesson-expectations-section">
-                    <div className="section-heading">
-                        <p className="section-eyebrow">What to Expect</p>
-                        <h2>A Positive and Personalized Approach</h2>
-                    </div>
-
-                    <div className="expectations-grid">
-                        <article>
-                            <h3>Every Swimmer Is Different</h3>
-                            <p>
-                                Children progress at different speeds. Lessons
-                                are adjusted based on confidence, experience,
-                                attention span, and physical ability.
-                            </p>
-                        </article>
-
-                        <article>
-                            <h3>Consistency Matters</h3>
-                            <p>
-                                Weekly lessons and regular opportunities to
-                                practice can help swimmers retain skills and
-                                build confidence more effectively.
-                            </p>
-                        </article>
-
-                        <article>
-                            <h3>Safety Comes First</h3>
-                            <p>
-                                Water safety, comfort, and good swimming habits
-                                are emphasized throughout every level of
-                                instruction.
-                            </p>
-                        </article>
-                    </div>
-                </section>
-
                 <section className="lesson-faq-section">
                     <div className="section-heading">
-                        <p className="section-eyebrow">Common Questions</p>
-                        <h2>Lesson FAQs</h2>
+                        <p className="section-eyebrow">Have Questions?</p>
+                        <h2>Frequently Asked Questions</h2>
+                        <p>
+                            Find answers to the questions I hear most often from parents! If you don't see what you're looking for, feel free to reach out using the button below.
+                        </p>
                     </div>
 
                     <div className="faq-grid">
+                        <div className="section-heading">
+                            <h3>Before Booking</h3>
+                        </div>
                         <article className="faq-card">
-                            <h3>How many lessons will my child need?</h3>
+                            <h3>What areas do you serve?</h3>
                             <p>
-                                Every swimmer is different. The number of lessons
-                                depends on their age, previous experience,
-                                comfort in the water, and swimming goals.
+                                I offer lessons in the Point Loma, San Diego, and La Jolla areas.
+                            </p>
+                        </article>
+                        <article className="faq-card">
+                            <h3>Where are lessons held?</h3>
+                            <p>
+                                As I travel to meet my clients, lessons will be located at a private pool near your area.
+                            </p>
+                        </article>
+                        <article className="faq-card">
+                            <h3>What ages do I teach?</h3>
+                            <p>
+                                I teach infants (0-2 years old), all the way up to young teenagers.
                             </p>
                         </article>
 
                         <article className="faq-card">
-                            <h3>Can parents watch the lesson?</h3>
+                            <h3>What skill levels do I teach?</h3>
                             <p>
-                                Parents are welcome to observe. It is usually
-                                best to allow the swimmer to focus on the
-                                instructor without receiving additional
-                                directions from the poolside.
+                                I accept clients with all levels of skill in swimming. From those who are afraid of water, to advanced swimmers looking to better refine their technique.
+                            </p>
+                        </article>
+                        <article className="faq-card">
+                            <h3>How long is each lesson?</h3> 
+                            <p>
+                                Regular lessons are 30 minutes, Infant lessons are 15 minutes. Longer lessons can be requested for an additional fee.
                             </p>
                         </article>
 
+                        <article className="faq-card">
+                            <h3>Will you teach at my pool?</h3>
+                            <p>
+                                If you have a private or community pool, I will teach in those!
+                            </p>
+                        </article>
+                        <div className="section-heading">
+                            <h3>Scheduling</h3>
+                        </div>
+                        <article className="faq-card">
+                        <h3>How do I schedule lessons?</h3> 
+                            <p>
+                                Get in touch with me via my client intake form, you can find this at the top of every page!
+                            </p>
+                        </article>
+                        <article className="faq-card">
+                            <h3>Can I book multiple lessons at once?</h3>
+                            <p>
+                                Yes, you can set up multiple lesson dates / sessions at once!
+                            </p>
+                        </article>
+                        <article className="faq-card">
+                        <h3>How far in advance should I schedule?</h3> 
+                            <p>
+                                You can schedule up to 2 months in advance.
+                            </p>
+                        </article>
+                        <article className="faq-card">
+                            <h3>Can lessons be rescheduled?</h3>
+                            <p>
+                                Yes lessons can be rescheduled, but as I have other clients you will not always be guranteed an opening for a reschedule.
+                            </p>
+                        </article>
+                         <div className="section-heading">
+                            <h3>During Lessons</h3>
+                        </div>
                         <article className="faq-card">
                             <h3>What should my child bring?</h3>
                             <p>
@@ -285,14 +113,72 @@ function FAQs(){
                                 diaper.
                             </p>
                         </article>
+                        <article className="faq-card">
+                            <h3>Should parents stay during the lesson?</h3>
+                            <p>
+                                Parents are welcome to stay and observe their kids lessons, but I ask that parents not interfere with the instruction.
+                            </p>
+                        </article>
+                        <article className="faq-card">
+                        <h3>What if my child is nervous or afraid of the water?</h3> 
+                            <p>
+                                That is perfectly normal for some children, and all the more reason for them to learn to swim. I will help them overcome their fear of the water, and teach them to swim!
+                            </p>
+                        </article>
 
                         <article className="faq-card">
-                            <h3>What happens during bad weather?</h3>
+                            <h3>How are lessons structured?</h3>
                             <p>
-                                Outdoor lessons may be postponed due to
-                                lightning, severe weather, or unsafe pool
-                                conditions. You will be contacted about
-                                rescheduling when necessary.
+                                Each lesson structure will vary as the lesson is meant to match the swimmer(s) I am working with. 
+                            </p>
+                        </article>
+                        <article className="faq-card">
+                            <h3>What happens if we arrive late?</h3>
+                            <p>
+                                Lessons tend to be structured back-to-back so a late arrival is taking away from your swimmers instruction time. Lessons are still full price, as that 30 minute slot was booked.
+                            </p>
+                        </article>
+                        <div className="section-heading">
+                            <h3>Weather</h3>
+                        </div>
+                        <article className="faq-card">
+                        <h3>What happens if it rains?</h3> 
+                            <p>
+                                Rain policy????
+                            </p>
+                        </article>
+                        <article className="faq-card">
+                            <h3>What happens if there is lightning?</h3>
+                            <p>
+                                Lightning in the immediate area, will mean a cancellation of lessons. I will communicate with you about this.
+                            </p>
+                        </article>
+                        <article className="faq-card">
+                        <h3>What if my child gets sick?</h3> 
+                            <p>
+                                24 hours cancellation notice is required, so I can attempt to rebook a slot. If 24 hours notice is not provided, I will request (half or full?) lesson fee charged.
+                            </p>
+                        </article>
+
+                        <div className="section-heading">
+                            <h3>Pricing/Payment</h3>
+                        </div>
+                        <article className="faq-card">
+                            <h3>What payment methods do I accept?</h3>
+                            <p>
+                                I only accept Venmo or Cash.
+                            </p>
+                        </article>
+                        <article className="faq-card">
+                        <h3>When is payment due?</h3> 
+                            <p>
+                                When would you like payment due?
+                            </p>
+                        </article>
+                        <article className="faq-card">
+                            <h3>Do you offer package discounts?</h3>
+                            <p>
+                                Yes! I prefer to discuss packaged or long-term lesson packages privately as each case is individual.
                             </p>
                         </article>
                     </div>
