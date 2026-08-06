@@ -185,19 +185,18 @@ function FAQs(){
                 </section>
 
                 <section className="lessons-cta">
-                    <p className="section-eyebrow">Start Swimming</p>
-                    <h2>Ready to Schedule a Lesson?</h2>
+                    <p className="section-eyebrow">Your Questions</p>
+                    <h2>I'd Love to Help! </h2>
 
                     <p>
-                        Whether your swimmer is entering the water for the first
-                        time or working to improve advanced strokes, lessons are
-                        personalized to help them become safer and more
-                        confident.
+                        Whether you're wondering about lesson options, scheduling, or anything
+                        else, I'm happy to help. Click below to get in touch, and I'll get back to
+                        you as soon as possible.
                     </p>
 
-                    <a onClick={() =>window.open('https://forms.gle/yK6MQFgN2CxF2DKy8','_blank')} 
-                        className="lessons-cta-button">
-                        Client Intake
+                    <a  href="mailto:ava@aemswimlessons.com"
+                    className="lessons-cta-button">
+                        Contact Me!
                     </a>
                 </section>
             </main>
